@@ -58,12 +58,15 @@ Support OS
 The scrip is tested under the following operating systems :  
 -  MAC OS X El Capitan (v10.11.2)
 -  Ubuntu 14.04.3 LTS
+
 However, the script is simple and does not inclde any special libraries, so it will proboplly wrok fine in most *nix systems.  
-### TODO List
+TODO List
+--------
 Here are the list of tasks that should be included next: 
 - Test and validate the scrip in other *nix distributions.
 - Add support to install/uninstall service.
-- 
+
+
 How can You help?
 -----------------
 
