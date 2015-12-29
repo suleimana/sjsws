@@ -1,22 +1,21 @@
 
-Simple Java Serivce Wrapper Script (SJSWS)
+Simple Java Service Wrapper Script (SJSWS)
 ==========
 
 
 What is SJSWS?
 -----
-Ever needed to run a Java program as a deamon(background service) on your *nix? All you want is to run some basic opertaion such start/stop/restart?. Then you are int right place. 
+Ever needed to run a Java program as a deamon(background service) on your *nix? All you want is to run some basic operations such start/stop/restart?. Then you are in the right place. 
 
-Baiscly SJSWS  is simple tool to generate a custom shell script to manage any java program as service (Start/Stop/restart/etc.. ). 
+Basically SJSWS  is simple tool to generate a custom shell script to manage any java program as service (Start/Stop/restart/etc.. ). 
 
 
-It worth mensioning that there are other alternatives you may use to run a Java program as a daemon on Linux:
+It worth mentioning that there are other alternatives you may use to run a Java program as a daemon on Linux:
 
 - Java Service Wrapper.
 - Apache Jakarta Commons Daemon package (Jsvc).
 
-These alternatives are mush more advanced and you can do alot more with it. However, they come with some complixty such as 
-compatiblties issue, having the need to implement custom interfaces, or install extra packages. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
+These alternatives are mush more advanced and you can do lot more with unsing them. However, they come with some complexities such as compatibility issues, having the need to implement custom interfaces, or its required to install some extra packages. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
 
 
 Features
@@ -24,12 +23,12 @@ Features
 
 - Easy to use.
 - Read values from editable properties file to generate custom script that works for your needs.   
-- Provide all baisc operations for a servcie such as Start/Stop/restart/Status. 
-- In addestion to the basic operations it also comse with other useful operation to get more infomation the configured service such process id, confugartions, and a help menu. 
+- Provide all basic operations for a service such as Start/Stop/restart/Status.
+- In addition to the basic operations the script also comes with other useful operation to get more information the configured service such process id, configurations, and a help menu. 
  
 
 
-SJSWS Details and strucutre : 
+SJSWS Details and structure : 
 ---
 
 ```
@@ -46,7 +45,7 @@ SJSWS Details and strucutre :
     └── ServiceTemplate.sh
 
 ```
-todo: describe the strucutre 
+todo: describe the structure 
 
 
 Running Example
@@ -59,7 +58,7 @@ The scrip is tested under the following operating systems :
 -  MAC OS X El Capitan (v10.11.2)
 -  Ubuntu 14.04.3 LTS
 
-However, the script is simple and does not inclde any special libraries, so it will proboplly wrok fine in most *nix systems.  
+However, the script is simple and does not include any special libraries, so it will probably work fine in most *nix systems.  
 TODO List
 --------
 Here are the list of tasks that should be included next: 
