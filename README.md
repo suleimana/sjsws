@@ -5,7 +5,18 @@ Simple Java Serivce Wrapper Script (SJSWS)
 
 What is SJSWS?
 -----
-Ever needed to run a Java program as a deamon(background service) on you *nix? All you want is run baic opertaion such start/stop/restart?. Baiscly SJSWS  is simple tool to generate a custom shell script to manage any java program as service (Start/Stop/restart/etc.. ). 
+Ever needed to run a Java program as a deamon(background service) on your *nix? All you want is to run some basic opertaion such start/stop/restart?. Then you are int right place. 
+
+Baiscly SJSWS  is simple tool to generate a custom shell script to manage any java program as service (Start/Stop/restart/etc.. ). 
+
+
+It worth mensioning that there are other alternatives you may use to run a Java program as a daemon on Linux:
+
+- Java Service Wrapper.
+- Apache Jakarta Commons Daemon package (Jsvc).
+
+These alternatives are mush more advanced and you can do alot more with it. However, they come with some complixty such as 
+compatiblties issue, having the need to implement custom interfaces, or install extra packages. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
 
 
 Features
