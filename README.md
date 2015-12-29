@@ -46,12 +46,12 @@ SJSWS Details and strucutre :
     └── ServiceTemplate.sh
 
 ```
-go throw the file and thier uses 
+todo: describe the strucutre 
 
 
 Running Example
 --------
-
+todo: go through the example.
 
 Support OS
 --------
