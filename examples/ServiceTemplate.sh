@@ -13,9 +13,9 @@
 
 SERVICE_NAME=V_SERVICE_NAME
 SERVICE_WORK_DIR=V_SERVICE_WORK_DIR
-SERIVCE_PID_FILE=V_SERIVCE_PID_FILE
+SERVICE_PID_FILE=V_SERVICE_PID_FILE
 SERVICE_CLASS_PATH=V_SERVICE_CLASS_PATH
-SERIVCE_CLASS=V_SERIVCE_CLASS
+SERVICE_CLASS=V_SERVICE_CLASS
 SERVICE_CMD=V_SERVICE_CMD
 
 get_conf()
@@ -26,9 +26,9 @@ get_conf()
 	The following list represent the service configurations:  
 	-\033[1mSERVICE_NAME\033[0m: $SERVICE_NAME
 	-\033[1mSERVICE_WORK_DIR\033[0m: $SERVICE_WORK_DIR
-	-\033[1mSERIVCE_PID_FILE\033[0m: $SERIVCE_PID_FILE
+	-\033[1mSERVICE_PID_FILE\033[0m: $SERVICE_PID_FILE
 	-\033[1mSERVICE_CLASS_PATH\033[0m: $SERVICE_CLASS_PATH
-	-\033[1mSERIVCE_CLASS\033[0m: $SERIVCE_CLASS
+	-\033[1mSERVICE_CLASS\033[0m: $SERVICE_CLASS
 	-\033[1mSERVICE_CMD\033[0m:  $SERVICE_CMD
 	------------------------------------------------------------------------------------------------------------
 	"
@@ -40,17 +40,17 @@ do_start()
 	#nohup java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &
 	nohup $SERVICE_CMD  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &	
 	echo $! > $SERIVCE_PID_FILE
-	PID=$(cat $SERIVCE_PID_FILE);
+	PID=$(cat $SERVICE_PID_FILE);
 	echo "$SERVICE_NAME service started with PID[$PID]..."
 }
 
 do_stop()
 {
-	PID=$(cat $SERIVCE_PID_FILE);
+	PID=$(cat $SERVICE_PID_FILE);
 	echo "Stopping $SERVICE_NAME service with PID[$PID]..."
 	kill $PID;
 	echo "$SERVICE_NAME stopped ..."
-	rm $SERIVCE_PID_FILE
+	rm $SERVICE_PID_FILE
 }
 
 do_restart()
@@ -61,10 +61,10 @@ do_restart()
 
 get_status()
 {
-	if [ ! -f $SERIVCE_PID_FILE ]; then
+	if [ ! -f $SERVICE_PID_FILE ]; then
 		echo "$SERVICE_NAME service is not running"
 	else
-		PID=$(cat $SERIVCE_PID_FILE);
+		PID=$(cat $SERVICE_PID_FILE);
 		echo "$SERVICE_NAME service is running on PID[$PID]"
 	fi
 }
@@ -121,21 +121,21 @@ case $1 in
 		get_status
 	;;
 	start)
-		if [ ! -f $SERIVCE_PID_FILE ]; then
+		if [ ! -f $SERVICE_PID_FILE ]; then
 			do_start
 		else
 			echo "$SERVICE_NAME service is already running."
 		fi
 	;;
 	stop)
-		if [ -f $SERIVCE_PID_FILE ]; then
+		if [ -f $SERVICE_PID_FILE ]; then
 			do_stop
 		else
 			echo "$SERVICE_NAME service is already stoped."
 		fi
 	;;
 	restart)
-		if [ -f $SERIVCE_PID_FILE ]; then
+		if [ -f $SERVICE_PID_FILE ]; then
 			do_restart
 		else
 			echo "$SERVICE_NAME service is not running. Start the serivce first."
