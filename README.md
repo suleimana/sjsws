@@ -42,7 +42,7 @@ Belwo is the main structure of SJSWS directory:
 ```
 
 #####Service.properties
-Contains the list of all configurable values that will be used to create the service shel scrip. Here is the list of values that currently supported: 
+Contains the list of all configurable values that will be used to create the service shel script. Here is the list of values that currently supported: 
 
 
 | Property Name | Description   |
@@ -52,19 +52,16 @@ Contains the list of all configurable values that will be used to create the ser
 | SERVICE_PID_FILE  | File name with full path that the service will use to store the proccess id. The defult is  $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
 | SERVICE_CLASS_PATH| Pathe to your jars      |
 | SERVICE_CLASS     | Full class name that has the main method for your java program|
-|SERVICE_CMD        |  the actual command that the final scrip will execut to start you service. Defult  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
+|SERVICE_CMD        |  the actual command that the final script will execut to start you service. Defult  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
 
 #####ServiceTemplate.sh
 This file represnts the template which is used to create the end result script. 
 
 #####ServiceConfig.sh
-
 this scrip used to creat the final script for your service. It all the read configured values from Service.properties file, feed them to the ServiceTemplate.sh file, and finaly store the  final copy  ""CURRENT_DIR/ouput/service.sh""
 
-
-
-todo: describe the structure 
-
+#####examples
+exmaple of how to use SJSWS to run configure and run a jar file as service. 
 
 Example Program
 --------
@@ -90,7 +87,8 @@ The scrip is tested under the following operating systems :
 -  MAC OS X El Capitan (v10.11.2)
 -  Ubuntu 14.04.3 LTS
 
-However, the script is simple and does not include any special libraries, so it will probably work fine in most *nix systems.  
+However, the script is simple and does not include any special libraries, so it will probably work fine in most *nix systems. 
+
 TODO List
 --------
 Here are the list of tasks that should be included next: 
