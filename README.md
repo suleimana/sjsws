@@ -92,7 +92,7 @@ However, the script is simple and does not include any special libraries, so it 
 TODO List
 --------
 Here are the list of tasks that should be included next: 
-- Test and validate the scrip in other *nix distributions.
+- Test and validate the script in other *nix distributions.
 - Add support to install/uninstall service.
 
 
