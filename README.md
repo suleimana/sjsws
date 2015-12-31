@@ -101,9 +101,9 @@ The examples folder contains sample java program (HelloPrintJob) with SJSWS file
 
 Here is the list of all steps required to run the example program as a service on your machine:
 
-1- Create jar files: The first thing to do is build the jar file for the HelloPrintJob program. The program simply prints the world "hello" into into a temp file every 10 seconds. For the purpose of this example there is a jar called "HelloPrintJob-1.0-SNAPSHOT.jar" ready to be used. In addition, the source code for this program is also provided under "examples/HelloPrintJob". So you can make any changes to the program and build a new jar file.
+1- Create jar files: The first thing to do is build the jar file for the HelloPrintJob program. The program simply prints the word "hello" into a temp file every 10 seconds. For the purpose of this example, there is a jar called "HelloPrintJob-1.0-SNAPSHOT.jar" ready to be used. In addition, the source code for this program is also provided under "examples/HelloPrintJob". So you can make any changes to the program and build a new jar file.
 
-2- Update Service.properties: Service.properties has set values such as the program location and the command used to start the java program. We assume that the working directory for this program will be  "/usr/local/myservices" . here is the full list of values: 
+2- Update Service.properties: Service.properties has a set values such as the program location and the command used to start the java program. We assume that the working directory for this program will be  "/usr/local/myservices". Here is the full list of values: 
 ````
 SERVICE_NAME=HelloPrintJob
 SERVICE_WORK_DIR="/usr/local/myservices"
@@ -114,11 +114,11 @@ SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERVICE_CLASS"
 
 ````
 
-3- Create the service script: to create the service scrip run  examples/ServiceConfig.sh:
+3- Create the service script: to create the service script, run  examples/ServiceConfig.sh:
 ````shell
 # sh ./ServiceConfig.sh
 ````
-after running this command you should have the service.sh created under output dir. 
+After running this command you should have the service.sh created under output dir. 
 
 
 4- Copy the jar file into the working dir "/usr/local/myservices"
@@ -128,25 +128,25 @@ after running this command you should have the service.sh created under output d
 # cp HelloPrintJob-1.0-SNAPSHOT.jar /usr/local/myservices/HelloPrintJob-1.0-SNAPSHOT.jar
 ````
 
-5- Add the created script as new service in init.d
+5- Add the created script as a new service in init.d
 ````
 # sudo cp output/service.sh /etc/init.d/helloprintservice
 # sudo chmod +x /etc/init.d/helloprintservice 
 # sudo update-rc.d helloprintservice defaults 
 ````
 
-That's it !!! Now you have helloprintservice setup as deamon. You can start service by calling start command:
+That's it!!! Now you have helloprintservice setup as a daemon. You can start the service by calling the "start" command:
 
 ````
 # /etc/init.d/helloprintservice start
 ````
 
-6- [extra step] Add a command shortcut for the service: This an extra step, but it makes it easier to call the service. To add command shortcut for the service: 
+6- Add a command shortcut for the service: This is an extra step, but it makes it easier to call the service. To add a command shortcut for the service: 
 ````
 sudo ln -s /etc/init.d/helloprintservice /usr/local/bin/helloprintservice
 ````
 
-Now you can call the service such as: 
+Now you can call the service by writing commands such: 
 ````
 #helloprintservice start
 #helloprintservice st
@@ -155,9 +155,9 @@ helloprintservice pid
 ````
 
 
-Support OS
+Supported OS
 --------
-The scrip is tested under the following operating systems :  
+The script is tested under the following operating systems:  
 -  MAC OS X El Capitan (v10.11.2)
 -  Ubuntu 14.04.3 LTS
 
