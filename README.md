@@ -54,7 +54,14 @@ SERVICE_CLASS=FULL CLASS NAME THAT HAS THE MAIN METHOD
 SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"
 ```
 
-
+| Property Name | Description   |
+| ------------- |:-------------:|
+| SERVICE_NAME      | YOUR SERVICE NAME WITHOUT ANY SPACES |
+| SERVICE_WORK_DIR     | YOUR ROOT WORK DIR      |
+| SERVICE_PID_FILE     | $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
+| SERVICE_CLASS_PATH | "PATH YOU YOUR JARs"     |
+| SERVICE_CLASS| FULL CLASS NAME THAT HAS THE MAIN METHOD|
+|SERVICE_CMD|"java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
 
 #####ServiceTemplate.sh
 This file represnts the template used to create the end result script. 
