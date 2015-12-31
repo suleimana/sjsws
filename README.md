@@ -58,10 +58,10 @@ SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"
 | ------------- |:-------------:|
 | SERVICE_NAME      | The name of your serivce without any spaces|
 | SERVICE_WORK_DIR  | The location to the dir where your jar file is located.       |
-| SERVICE_PID_FILE  | File name with path which the service will use to store the serivce proccess id. The defult is  $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
-| SERVICE_CLASS_PATH| "PATH YOU YOUR JARs"     |
-| SERVICE_CLASS     | FULL CLASS NAME THAT HAS THE MAIN METHOD|
-|SERVICE_CMD        |"java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
+| SERVICE_PID_FILE  | File name with full path that the service will use to store the proccess id. The defult is  $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
+| SERVICE_CLASS_PATH| Pathe to your jars      |
+| SERVICE_CLASS     | Full class name that has the main method for your java program|
+|SERVICE_CMD        |  the actual command that the final scrip will execut to start you service. Defult  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
 
 #####ServiceTemplate.sh
 This file represnts the template used to create the end result script. 
