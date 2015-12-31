@@ -42,7 +42,7 @@ Belwo is the main structure of SJSWS directory:
 ```
 
 #####Service.properties
-Contains the list of all configurable values that will be used to create the service shel scrip. Here is the list of values that is currently supported: 
+Contains the list of all configurable values that will be used to create the service shel scrip. Here is the list of values that currently supported: 
 
 
 | Property Name | Description   |
