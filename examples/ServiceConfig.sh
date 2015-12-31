@@ -1,11 +1,11 @@
 #!/bin/sh
-### BEGIN INIT INFO
+### BEGIN INFO
 # author:      	     Suleiman Alrosan
-#version:	     v0.1
-# Short-Description: configuration scrip to generate a wrapper service scrip with custom values read from properties file. 
-### END INIT INFO
+# version:	     v0.1
+# Short-Description: configuration script to generate a wrapper service script with custom values read from properties file. 
+### END INFO
 
-OUTPUT_DIR="ouput"
+OUTPUT_DIR="output"
 OUTPUT_FILE="service.sh"
 file="Service.properties"
 TEMPLATE_FILE="ServiceTemplate.sh"
@@ -15,7 +15,7 @@ copy_output()
 	echo "=> Prepare output dir...
 	"
 	if [ ! -f $OUTPUT_DIR ]; then
-		echo "Remove output dir first, since it's already existes.";
+		echo "Remove output dir first, since it's already exists.";
 		rm -r $OUTPUT_DIR;
 	fi
 	echo "Create output dir: $OUTPUT_DIR"
