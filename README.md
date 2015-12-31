@@ -52,7 +52,7 @@ Contains the list of all configurable values that will be used to create the ser
 | SERVICE_PID_FILE  | File name with full path that the service will use to store the process id. The default is  $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
 | SERVICE_CLASS_PATH| Path to your jars      |
 | SERVICE_CLASS     | Full class name that has the main method for your java program|
-|SERVICE_CMD        |  the actual command that the final script will execute to start you service. Default  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
+|SERVICE_CMD        |  the actual command that the final script will execute to start you service. Default  is "java -cp $SERVICE_CLASS_PATH $SERVICE_CLASS"|
 
 #####ServiceTemplate.sh
 This file represents the template which is used to create the end result script. 
@@ -90,7 +90,7 @@ SERVICE_WORK_DIR="/usr/local/myservices"
 SERVICE_PID_FILE=$SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"
 SERVICE_CLASS_PATH="$SERVICE_WORK_DIR/HelloPrintJob-1.0-SNAPSHOT.jar"
 SERVICE_CLASS=com.job.hello.App
-SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"
+SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERVICE_CLASS"
 
 ````
 
