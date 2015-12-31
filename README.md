@@ -67,7 +67,7 @@ contains an example of how to use SJSWS to configure and run a jar file as servi
 
 Service operations:
 ---
-the generated service support the following operations: 
+the generated script will support the following operations: 
 
 	- h,helpe: print information about the scrip.  
 
