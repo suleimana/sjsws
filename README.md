@@ -94,16 +94,27 @@ SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"
 
 ````
 
-3- Create the service script: to create the service scrip run  example/ServiceConfig.sh:
+3- Create the service script: to create the service scrip run  examples/ServiceConfig.sh:
+````shell
+# sh ./ServiceConfig.sh
+````
+after running this command  should have the service.sh created under ouput dir. 
+
+
+4- Copy the   service.sh and the jar file into the working dir "/usr/local/myservices"
+
+````
+# mkdir /usr/local/myservices
+# cp ouput/service.sh /usr/local/myservices/service.sh
+
+
+````
 
 
 
 
-mkdir /usr/local/batchmanager
 
 
-
-src:http://developer.bostjan-cigan.com/running-java-program-as-a-daemon-in-ubuntu-linux/
 
 add new service
 root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo cp ouput/service.sh /etc/init.d/cleanbatchmanager
