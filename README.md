@@ -55,10 +55,11 @@ Contains the list of all configurable values that will be used to create the ser
 |SERVICE_CMD        |  the actual command that the final scrip will execut to start you service. Defult  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
 
 #####ServiceTemplate.sh
-This file represnts the template used to create the end result script. 
+This file represnts the template which is used to create the end result script. 
 
 #####ServiceConfig.sh
-Is a scrip that creats the service script and save the same directory with follwing path CURRENT_DIR/ouput/service.sh
+
+this scrip used to creat the final script for your service. It all the read configured values from Service.properties file, feed them to the ServiceTemplate.sh file, and finaly store the  final copy  ""CURRENT_DIR/ouput/service.sh""
 
 
 
