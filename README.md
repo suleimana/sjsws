@@ -65,8 +65,8 @@ contains an example of how to use SJSWS to configure and run a jar file as servi
 
 Going Through the Example
 --------
-
-
+The exmaples folder, contains sample java program(HelloPrintJob) with with SJSWS files which be used to creat service scrip.
+ 
 ```
 .
 .
@@ -79,7 +79,31 @@ Going Through the Example
 
 ```
 
-todo: go through the example.
+Here is the list of all steps required to run the exmaple program as service on your machine:
+
+1-  Create jar files: The first thing to do is prepear the jar file for the HelloPrintJob program that prints the world "hello" into into a temp file every 10 seconds. For the perpuse of this example there is a jar called "HelloPrintJob-1.0-SNAPSHOT.jar" ready to be used. The source code for this program is also provided under "exmaples/HelloPrintJob". So you can make any changes to the program and build a new jar file. 
+
+2- Update Service.properties: Service.properties has set vlaues for the program location and command used to start the java program. For the perpuse of this example 
+
+
+
+mkdir /usr/local/batchmanager
+
+
+
+src:http://developer.bostjan-cigan.com/running-java-program-as-a-daemon-in-ubuntu-linux/
+
+add new service
+root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo cp ouput/service.sh /etc/init.d/cleanbatchmanager
+root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo chmod +x /etc/init.d/cleanbatchmanager 
+root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo update-rc.d cleanbatchmanager defaults 
+
+
+
+remove service 
+root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo rm /etc/init.d/cleanbatchmanager
+root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo update-rc.d cleanbatchmanager remove 
+
 
 Support OS
 --------
