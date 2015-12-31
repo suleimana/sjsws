@@ -85,7 +85,7 @@ print_help()
 	This is a simple script to manage java programs(Start/stop/restart/etc.. ), which can be setup as deamon(background service).
 	The script accepts the following commands:
 	
-	- \033[1mh,helpe\033[0m: print information about the scrip.  
+	- \033[1mh,help\033[0m: print information about the scrip.  
 
 	- \033[1mconf\033[0m: print the current configuration values for the service. 
 
