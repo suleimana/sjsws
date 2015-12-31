@@ -91,11 +91,11 @@ print_help()
 
 	- \033[1mst, status\033[0m: print the current status of the service. 
 
-	- \033[1mstart\033[0m: start service by executing the configured java command.   
+	- \033[1mstart\033[0m: start the service by executing the configured java command.   
 
 	- \033[1mstop\033[0m: stop the service by killing the PID.
 
-	- \033[1mrestart\033[0m: restart configured service by stop and then starting the service again. 
+	- \033[1mrestart\033[0m: restart the configured service by stopping and then starting the service again. 
 	
 	- \033[1mpid\033[0m: print the PID for service.
 	'
