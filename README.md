@@ -63,6 +63,28 @@ this scrip used to create the final script for your service. It all the read con
 #####examples
 contains an example of how to use SJSWS to configure and run a jar file as service. 
 
+
+
+Service operations:
+---
+the generated service support the following operations: 
+
+	- h,helpe: print information about the scrip.  
+
+	- conf: print the current configuration values for the service. 
+
+	- st, status: print the current status of the service. 
+
+	- start: start service by executing the configured java command.   
+
+	- stop: stop the service by killing the PID.
+
+	- restart: restart configured service by stop and then starting the service again. 
+	
+	- pid: print the PID for service.
+
+
+
 Going Through the Example
 --------
 The examples folder, contains sample java program(HelloPrintJob) with with SJSWS files which be used to create service scrip.
