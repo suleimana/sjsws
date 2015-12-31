@@ -32,11 +32,23 @@ SJSWS Details and structure :
 ---
 
 ```
-.
 ├── README.md
 ├── Service.properties
 ├── ServiceConfig.sh
 ├── ServiceTemplate.sh
+└── examples
+
+```
+todo: describe the structure 
+
+
+Running Example
+--------
+
+
+```
+.
+.
 └── examples
     ├── HelloPrintJob
     ├── HelloPrintJob-1.0-SNAPSHOT.jar
@@ -45,11 +57,7 @@ SJSWS Details and structure :
     └── ServiceTemplate.sh
 
 ```
-todo: describe the structure 
 
-
-Running Example
---------
 todo: go through the example.
 
 Support OS
