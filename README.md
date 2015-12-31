@@ -83,7 +83,7 @@ Here is the list of all steps required to run the exmaple program as service on 
 
 1-  Create jar files: The first thing to do is prepear the jar file for the HelloPrintJob program that prints the world "hello" into into a temp file every 10 seconds. For the perpuse of this example there is a jar called "HelloPrintJob-1.0-SNAPSHOT.jar" ready to be used. The source code for this program is also provided under "exmaples/HelloPrintJob". So you can make any changes to the program and build a new jar file. 
 
-2- Update Service.properties: Service.properties has set values such as the program location and the command used to start the java program. We assume that the working dirctory for this program will be  "/usr/local/myservices" . here is the full list values: 
+2- Update Service.properties: Service.properties has set values such as the program location and the command used to start the java program. We assume that the working dirctory for this program will be  "/usr/local/myservices" . here is the full list of values: 
 ````
 SERVICE_NAME=HelloPrintJob
 SERVICE_WORK_DIR="/usr/local/myservices"
@@ -91,8 +91,13 @@ SERVICE_PID_FILE=$SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"
 SERVICE_CLASS_PATH="$SERVICE_WORK_DIR/HelloPrintJob-1.0-SNAPSHOT.jar"
 SERVICE_CLASS=com.job.hello.App
 SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"
-Status API Training Shop Blog About Pricing
+
 ````
+
+3- Create the service script: to create the service scrip run  example/ServiceConfig.sh:
+
+
+
 
 mkdir /usr/local/batchmanager
 
