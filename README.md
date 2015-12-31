@@ -98,34 +98,41 @@ SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERVICE_CLASS"
 ````shell
 # sh ./ServiceConfig.sh
 ````
-after running this command  should have the service.sh created under ouput dir. 
+after running this command you should have the service.sh created under ouput dir. 
 
 
-4- Copy the   service.sh and the jar file into the working dir "/usr/local/myservices"
+4- Copy the jar file into the working dir "/usr/local/myservices"
 
 ````
 # mkdir /usr/local/myservices
-# cp ouput/service.sh /usr/local/myservices/service.sh
-
-
+# cp HelloPrintJob-1.0-SNAPSHOT.jar /usr/local/myservices/HelloPrintJob-1.0-SNAPSHOT.jar
 ````
 
+5- Add the created script as new service in init.d
+````
+# sudo cp output/service.sh /etc/init.d/helloprintservice
+# sudo chmod +x /etc/init.d/helloprintservice 
+# sudo update-rc.d helloprintservice defaults 
+````
 
+That's it !!! Now you have helloprintservice setup as deamon. You can start service by calling start command:
 
+````
+# /etc/init.d/helloprintservice start
+````
 
+6- [extra step] Add a command shortcut for the service: This an extra step, but it makes it easier to call the service. To add command shortct for service: 
+````
+sudo ln -s /etc/init.d/helloprintservice /usr/local/bin/helloprintservice
+````
 
-
-
-add new service
-root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo cp ouput/service.sh /etc/init.d/cleanbatchmanager
-root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo chmod +x /etc/init.d/cleanbatchmanager 
-root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo update-rc.d cleanbatchmanager defaults 
-
-
-
-remove service 
-root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo rm /etc/init.d/cleanbatchmanager
-root@PollectedHostServer:/usr/local/batchmanager/SJSWS# sudo update-rc.d cleanbatchmanager remove 
+Now you can call the service such as: 
+````
+#helloprintservice start
+#helloprintservice st
+helloprintservice pid
+#helloprintservice stop
+````
 
 
 Support OS
