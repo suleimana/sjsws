@@ -28,7 +28,7 @@ Features
  
 
 
-SJSWS Details and structure
+Details and Structure
 ---
 
 ```
@@ -42,7 +42,7 @@ SJSWS Details and structure
 todo: describe the structure 
 
 
-Running Example
+Example Program
 --------
 
 
