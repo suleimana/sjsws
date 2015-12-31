@@ -15,7 +15,7 @@ It worth mentioning that there are other alternatives you may use to run a Java 
 - Java Service Wrapper.
 - Apache Jakarta Commons Daemon package (Jsvc).
 
-These alternatives are much more advanced and you can do lot more by unsing them. However, they come with some complexities such as compatibility issues, having the need to implement custom interfaces, or that it requires to install some extra packages before using. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
+These alternatives are much more advanced and you can do lot more by using them. However, they come with some complexities such as compatibility issues, having the need to implement custom interfaces, or that it requires to install some extra packages before using. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
 
 
 Features
@@ -30,7 +30,7 @@ Features
 
 Details and Structure
 ---
-Belwo is the main structure of SJSWS directory:
+Below is the main structure of SJSWS directory:
 
 ```
 .
@@ -47,23 +47,23 @@ Contains the list of all configurable values that will be used to create the ser
 
 | Property Name | Description   |
 | ------------- |:-------------:|
-| SERVICE_NAME      | The name of your serivce without any spaces|
+| SERVICE_NAME      | The name of your service without any spaces|
 | SERVICE_WORK_DIR  | The location to the dir where your jar file is located.       |
-| SERVICE_PID_FILE  | File name with full path that the service will use to store the proccess id. The defult is  $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
-| SERVICE_CLASS_PATH| Pathe to your jars      |
+| SERVICE_PID_FILE  | File name with full path that the service will use to store the process id. The default is  $SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"   |
+| SERVICE_CLASS_PATH| Path to your jars      |
 | SERVICE_CLASS     | Full class name that has the main method for your java program|
-|SERVICE_CMD        |  the actual command that the final script will execut to start you service. Defult  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
+|SERVICE_CMD        |  the actual command that the final script will execute to start you service. Default  is "java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"|
 
 #####ServiceTemplate.sh
-This file represnts the template which is used to create the end result script. 
+This file represents the template which is used to create the end result script. 
 
 #####ServiceConfig.sh
-this scrip used to creat the final script for your service. It all the read configured values from Service.properties file, feed them to the ServiceTemplate.sh file, and finaly store the  final copy  ""CURRENT_DIR/ouput/service.sh""
+this scrip used to create the final script for your service. It all the read configured values from Service.properties file, feed them to the ServiceTemplate.sh file, and finally store the  final copy  ""CURRENT_DIR/output/service.sh""
 
 #####examples
-exmaple of how to use SJSWS to run configure and run a jar file as service. 
+example of how to use SJSWS to run configure and run a jar file as service. 
 
-Example Program
+Going Through the Example
 --------
 
 
