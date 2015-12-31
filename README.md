@@ -32,7 +32,7 @@ SJSWS Details and structure :
 ---
 
 ```
-├── README.md
+.
 ├── Service.properties
 ├── ServiceConfig.sh
 ├── ServiceTemplate.sh
