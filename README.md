@@ -24,7 +24,7 @@ Features
 - Easy to use.
 - Read values from editable properties file to generate custom script that works for your needs.   
 - Provide all basic operations for a service such as Start/Stop/restart/Status.
-- In addition to the basic operations the script also comes with other useful operation to get more information the configured service such process id, configurations, and a help menu. 
+- In addition to the basic operations, the script also comes with other useful operation to get more information about the configured service such process id, configuration values, and a help menu. 
  
 
 
