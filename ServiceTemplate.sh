@@ -26,7 +26,7 @@ get_conf()
 	The following list represent the service configurations:  
 	-\033[1mSERVICE_NAME\033[0m: $SERVICE_NAME
 	-\033[1mSERVICE_WORK_DIR\033[0m: $SERVICE_WORK_DIR
-	-\033[1mSERVICE_PID_FILE\033[0m: $SERIVCE_PID_FILE
+	-\033[1mSERVICE_PID_FILE\033[0m: $SERVICE_PID_FILE
 	-\033[1mSERVICE_CLASS_PATH\033[0m: $SERVICE_CLASS_PATH
 	-\033[1mSERVICE_CLASS\033[0m: $SERVICE_CLASS
 	-\033[1mSERVICE_CMD\033[0m:  $SERVICE_CMD
@@ -37,7 +37,7 @@ get_conf()
 do_start()
 {
 	echo "Starting $SERVICE_NAME service ..."
-	#nohup java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &
+	#nohup java -cp $SERVICE_CLASS_PATH $SERVICE_CLASS  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &
 	nohup $SERVICE_CMD  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &	
 	echo $! > $SERVICE_PID_FILE
 	PID=$(cat $SERVICE_PID_FILE);
