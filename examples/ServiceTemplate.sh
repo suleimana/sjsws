@@ -37,9 +37,9 @@ get_conf()
 do_start()
 {
 	echo "Starting $SERVICE_NAME service ..."
-	#nohup java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &
+	#nohup java -cp $SERVICE_CLASS_PATH $SERVICE_CLASS  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &
 	nohup $SERVICE_CMD  $SERVICE_WORK_DIR 2>> /dev/null >> /dev/null &	
-	echo $! > $SERIVCE_PID_FILE
+	echo $! > $SERVICE_PID_FILE
 	PID=$(cat $SERVICE_PID_FILE);
 	echo "$SERVICE_NAME service started with PID[$PID]..."
 }
@@ -70,10 +70,10 @@ get_status()
 }
 
 get_pid(){
-	if [ ! -f $SERIVCE_PID_FILE ]; then
+	if [ ! -f $SERVICE_PID_FILE ]; then
 		echo "NO ACTIVE PID"
 	else
-		PID=$(cat $SERIVCE_PID_FILE);
+		PID=$(cat $SERVICE_PID_FILE);
 		echo "PID: $PID"
 	fi
 }
@@ -81,23 +81,23 @@ get_pid(){
 print_help()
 {
 	echo '
-	--------------------------  \033[7mSimple Java Serivce Wrapper Script(SJSWS)\033[0m -----------------------------
-	This is a simple script to manage java programs(Start/stop/restart/etc.. ), wiche can be setup as deamon(background serivce).
-	The script accepts the follwing commands:
+	--------------------------  \033[7mSimple Java Service Wrapper Script(SJSWS)\033[0m -----------------------------
+	This is a simple script to manage java programs(Start/stop/restart/etc.. ), which can be setup as deamon(background service).
+	The script accepts the following commands:
 	
 	- \033[1mh,helpe\033[0m: print information about the scrip.  
 
-	- \033[1mconf\033[0m: print the currunt configuration values for the service. 
+	- \033[1mconf\033[0m: print the current configuration values for the service. 
 
 	- \033[1mst, status\033[0m: print the current status of the service. 
 
-	- \033[1mstart\033[0m: start service by ecexuting the configured java command.   
+	- \033[1mstart\033[0m: start service by executing the configured java command.   
 
 	- \033[1mstop\033[0m: stop the service by killing the PID.
 
-	- \033[1mrestart\033[0m: restart configured serivce by stop and then starting the service again. 
-
-	- \033[1mpid\033[0m: print the PID for serivce.
+	- \033[1mrestart\033[0m: restart configured service by stop and then starting the service again. 
+	
+	- \033[1mpid\033[0m: print the PID for service.
 	'
 }
 
@@ -131,14 +131,14 @@ case $1 in
 		if [ -f $SERVICE_PID_FILE ]; then
 			do_stop
 		else
-			echo "$SERVICE_NAME service is already stoped."
+			echo "$SERVICE_NAME service is already stopped."
 		fi
 	;;
 	restart)
 		if [ -f $SERVICE_PID_FILE ]; then
 			do_restart
 		else
-			echo "$SERVICE_NAME service is not running. Start the serivce first."
+			echo "$SERVICE_NAME service is not running. Start the service first."
 		fi
 	;;
 	*)  
