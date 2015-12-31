@@ -30,6 +30,7 @@ Features
 
 Details and Structure
 ---
+Belwo is the main structure of SJSWS directory:
 
 ```
 .
@@ -39,6 +40,22 @@ Details and Structure
 └── examples
 
 ```
+
+#####Service.properties
+Contains the list of all configurable values that will be used to create the service shel scrip. Here is the list of values that is currently supported: 
+
+
+
+
+
+#####ServiceTemplate.sh
+This file represnts the template used to create the end result script. 
+
+#####ServiceConfig.sh
+Is a scrip that creats the service script and save the same directory with follwing path CURRENT_DIR/ouput/service.sh
+
+
+
 todo: describe the structure 
 
 
