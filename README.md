@@ -15,7 +15,7 @@ It worth mentioning that there are other alternatives you may use to run a Java 
 - Java Service Wrapper.
 - Apache Jakarta Commons Daemon package (Jsvc).
 
-These alternatives are much more advanced and you can do lot more by unsing them. However, they come with some complexities such as compatibility issues, having the need to implement custom interfaces, or its required to install some extra packages. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
+These alternatives are much more advanced and you can do lot more by unsing them. However, they come with some complexities such as compatibility issues, having the need to implement custom interfaces, or that it requires to install some extra packages before using. A shell script, on the other hand, is easier to adapt to changing OS and Java environments.       
 
 
 Features
