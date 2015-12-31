@@ -44,15 +44,6 @@ Belwo is the main structure of SJSWS directory:
 #####Service.properties
 Contains the list of all configurable values that will be used to create the service shel scrip. Here is the list of values that is currently supported: 
 
-```
-
-SERVICE_NAME=YOUR SERVICE NAME WITHOUT ANY SPACES
-SERVICE_WORK_DIR="YOUR ROOT WORK DIR"
-SERVICE_PID_FILE=$SERVICE_WORK_DIR"/"$SERVICE_NAME"_pid"
-SERVICE_CLASS_PATH="PATH YOU YOUR JARs"
-SERVICE_CLASS=FULL CLASS NAME THAT HAS THE MAIN METHOD
-SERVICE_CMD="java -cp $SERVICE_CLASS_PATH $SERIVCE_CLASS"
-```
 
 | Property Name | Description   |
 | ------------- |:-------------:|
