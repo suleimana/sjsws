@@ -28,7 +28,7 @@ Features
  
 
 
-SJSWS Details and structure : 
+SJSWS Details and structure
 ---
 
 ```
