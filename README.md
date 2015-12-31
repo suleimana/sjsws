@@ -61,7 +61,7 @@ This file represents the template which is used to create the end result script.
 this scrip used to create the final script for your service. It all the read configured values from Service.properties file, feed them to the ServiceTemplate.sh file, and finally store the  final copy  ""CURRENT_DIR/output/service.sh""
 
 #####examples
-example of how to use SJSWS to run configure and run a jar file as service. 
+contains an example of how to use SJSWS to configure and run a jar file as service. 
 
 Going Through the Example
 --------
